@@ -149,3 +149,87 @@ docker run --rm simplecli:latest
 ---
 
 Para futuras actualizaciones, vuelve pronto para releer el archivo readme. Saludos !
+
+---
+
+## 🚀 Novedades del Release
+
+Este release introduce un pipeline completo y automatizado de distribución para **simplecli**, facilitando su instalación y uso en múltiples plataformas.
+
+---
+
+### ✨ ¿Qué hay de nuevo?
+
+* ⚙️ **Releases automatizados con GoReleaser**
+
+  * Binarios multiplataforma (Linux, macOS, Windows)
+  * Paquetes listos para usar (`.tar.gz`, `.zip`)
+  * Generación automática de checksums para verificación
+
+* 🔁 **Integración con CI/CD**
+
+  * Los releases se generan automáticamente al crear un tag
+  * Builds reproducibles y consistentes
+
+* 🍺 **Soporte para Homebrew (Linux y macOS)**
+
+  * Instalación con un solo comando:
+
+    ```bash
+    brew tap mnkboy/simplecli
+    brew install simplecli
+    ```
+  * Actualizaciones sencillas con `brew upgrade`
+
+---
+
+### 🧪 Mejoras durante este release
+
+Durante la implementación del sistema de distribución se realizaron varias mejoras importantes:
+
+* Validación de accesibilidad pública de los binarios
+* Verificación de descargas mediante herramientas CLI (`curl`)
+* Corrección de inconsistencias entre tags y assets en los releases
+* Ajustes en la fórmula de Homebrew para asegurar instalaciones confiables
+
+---
+
+### 📦 Instalación
+
+#### Usando Homebrew
+
+```bash id="lq7n0y"
+brew tap mnkboy/simplecli
+brew install simplecli
+```
+
+#### Instalación manual
+
+```bash id="q2e0h9"
+curl -L https://github.com/mnkboy/simplecli/releases/latest/download/simplecli_Linux_x86_64.tar.gz | tar xz
+chmod +x simplecli
+sudo mv simplecli /usr/local/bin/
+```
+
+---
+
+### 🧠 ¿Por qué es importante?
+
+Este release lleva a **simplecli** a un nivel listo para producción:
+
+* 🔒 Builds reproducibles
+* 🌍 Distribución pública
+* ⚡ Instalación rápida y sencilla
+* 🔄 Actualizaciones fáciles
+
+---
+
+### 🎯 Estado actual
+
+**simplecli ya puede instalarse, actualizarse y distribuirse como una herramienta CLI profesional.**
+
+---
+
+### 💬 Feedback
+
+Si encuentras algún problema o tienes sugerencias, no dudes en abrir un issue o contribuir al proyecto.
