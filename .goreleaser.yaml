@@ -58,8 +58,7 @@ release:
     Released by [GoReleaser](https://github.com/goreleaser/goreleaser).
 
 brews:
-  -
-    name: simplecli
+  - name: simplecli    
     commit_author:
       name: goreleaserbot
       email: bot@goreleaser.com
@@ -70,3 +69,10 @@ brews:
     repository:
       owner: mnkboy
       name: homebrew-simplecli
+
+dockers:
+  -
+    image_templates:     
+      - "docker.io/mnkboy/simplecli:{{ .Version }}"
+    build_flag_templates:
+      - "--no-cache"
