@@ -141,6 +141,11 @@ git push origin v1.0.5
 git push --tags
 ```
 
+## Comandos utiles compilacion docker:
+
+docker build -t simplecli:latest .
+docker run --rm simplecli:latest
+
 ---
 
 Para futuras actualizaciones, vuelve pronto para releer el archivo readme. Saludos !
