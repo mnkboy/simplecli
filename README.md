@@ -296,6 +296,166 @@ docker run --rm docker.io/<usuario>/simplecli:<version> --version
 
 ---
 
+## 📦 Instalación mediante paquetes (`.deb` y `.rpm`)
+
+Además de Homebrew y descarga directa, **simplecli** también puede instalarse mediante paquetes nativos para sistemas Linux basados en Debian y Red Hat.
+
+---
+
+### 🐧 Sistemas Debian/Ubuntu (`.deb`)
+
+Descarga el paquete correspondiente desde la sección de releases y ejecuta:
+
+```bash
+sudo dpkg -i simplecli_<version>_amd64.deb
+```
+
+Si existen dependencias pendientes, puedes resolverlas con:
+
+```bash
+sudo apt-get install -f
+```
+
+---
+
+### 🐧 Sistemas Red Hat / CentOS / Fedora (`.rpm`)
+
+Para distribuciones basadas en RPM:
+
+```bash
+sudo rpm -i simplecli-<version>.x86_64.rpm
+```
+
+---
+
+### 🔄 Actualización
+
+Para actualizar a una nueva versión, simplemente instala el nuevo paquete:
+
+```bash
+sudo dpkg -i simplecli_<nueva_version>_amd64.deb
+```
+
+o
+
+```bash
+sudo rpm -Uvh simplecli-<nueva_version>.x86_64.rpm
+```
+
+---
+
+### 🗑️ Desinstalación
+
+#### Debian/Ubuntu
+
+```bash
+sudo dpkg -r simplecli
+```
+
+#### Red Hat / CentOS / Fedora
+
+```bash
+sudo rpm -e simplecli
+```
+
+---
+
+### 📌 Notas
+
+* Los paquetes instalan el binario en una ruta estándar accesible globalmente.
+* No requieren configuración adicional tras la instalación.
+* Cada paquete corresponde a una versión específica del CLI.
+* Se recomienda verificar la arquitectura del sistema antes de instalar (`amd64`, `arm64`, etc.).
+
+---
+
+### 🎯 Resumen
+
+Los paquetes `.deb` y `.rpm` permiten integrar **simplecli** de forma nativa en el sistema, facilitando su instalación, actualización y eliminación mediante las herramientas estándar del sistema operativo.
+
+---
+
+## ⚡ Instalación rápida
+
+**simplecli** puede instalarse de múltiples formas según tu entorno. Elige la opción que mejor se adapte a tu flujo de trabajo.
+
+---
+
+### 🍺 Homebrew (Linux y macOS)
+
+```bash
+brew tap mnkboy/simplecli
+brew install simplecli
+```
+
+---
+
+### 🐳 Docker
+
+```bash
+docker run --rm docker.io/mnkboy/simplecli:latest --help
+```
+
+---
+
+### 📦 Paquetes Linux (`.deb` / `.rpm`)
+
+#### Debian / Ubuntu
+
+```bash
+sudo dpkg -i simplecli_<version>_amd64.deb
+```
+
+#### Red Hat / CentOS / Fedora
+
+```bash
+sudo rpm -i simplecli-<version>.x86_64.rpm
+```
+
+---
+
+### 📥 Descarga directa (binario)
+
+```bash
+curl -L https://github.com/mnkboy/simplecli/releases/latest/download/simplecli_Linux_x86_64.tar.gz | tar xz
+chmod +x simplecli
+sudo mv simplecli /usr/local/bin/
+```
+
+---
+
+## 🧪 Verificación
+
+Después de instalar, puedes validar la instalación:
+
+```bash
+simplecli --version
+```
+
+---
+
+## 🧠 Recomendaciones
+
+* Usa **Homebrew** si buscas facilidad de instalación y actualización.
+* Usa **Docker** para entornos aislados o pipelines CI/CD.
+* Usa **paquetes `.deb` / `.rpm`** para integración nativa en sistemas Linux.
+* Usa **descarga directa** para entornos mínimos o sin gestores de paquetes.
+
+---
+
+## 🎯 Resumen
+
+simplecli está disponible como:
+
+* 📦 Binario nativo
+* 🍺 Paquete Homebrew
+* 🐳 Imagen Docker
+* 🐧 Paquete `.deb` y `.rpm`
+
+Esto permite su uso en una amplia variedad de entornos de desarrollo y producción.
+
+---
+
 ### 💬 Feedback
 
 Si encuentras algún problema o tienes sugerencias, no dudes en abrir un issue o contribuir al proyecto.
