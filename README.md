@@ -230,6 +230,72 @@ Este release lleva a **simplecli** a un nivel listo para producción:
 
 ---
 
+## 🐳 Distribución mediante Docker
+
+En esta versión se añadió soporte para distribución de **simplecli** como imagen Docker, permitiendo su ejecución sin necesidad de instalación previa en el sistema.
+
+---
+
+### 🚀 ¿Qué se implementó?
+
+* 🔧 **Integración con GoReleaser**
+
+  * Construcción automática de imágenes Docker en cada release
+  * Uso de los binarios generados durante el proceso de build
+  * Versionado consistente basado en tags
+
+* 📦 **Publicación automática de imágenes**
+
+  * Generación de imágenes etiquetadas por versión
+  * Soporte para etiqueta `latest` como referencia a la versión más reciente
+
+* ⚙️ **Dockerfile optimizado**
+
+  * Uso de una imagen base mínima (`scratch`) para reducir el tamaño final
+  * Inclusión únicamente del binario compilado
+  * Ejecución directa del CLI como entrypoint
+
+---
+
+### 🧪 Uso
+
+Una vez publicado un release, la imagen puede ejecutarse directamente:
+
+```bash
+docker run --rm docker.io/<usuario>/simplecli:latest --help
+```
+
+También es posible utilizar una versión específica:
+
+```bash
+docker run --rm docker.io/<usuario>/simplecli:<version> --version
+```
+
+---
+
+### 🧠 Beneficios
+
+* ⚡ Ejecución inmediata sin instalación local
+* 📦 Entorno aislado y reproducible
+* 🔄 Consistencia entre plataformas
+* 🚀 Integración sencilla en pipelines y entornos CI/CD
+
+---
+
+### 📌 Notas
+
+* Las imágenes Docker se generan automáticamente a partir de los binarios del release.
+* El proceso está completamente integrado con el flujo de versionado basado en tags.
+* Se garantiza que cada imagen corresponde exactamente a una versión publicada del CLI.
+
+---
+
+### 🎯 Estado actual
+
+**simplecli ahora puede ejecutarse tanto como binario nativo como dentro de un contenedor Docker, ampliando sus opciones de distribución y uso.**
+
+---
+
 ### 💬 Feedback
 
 Si encuentras algún problema o tienes sugerencias, no dudes en abrir un issue o contribuir al proyecto.
