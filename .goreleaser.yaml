@@ -76,3 +76,20 @@ dockers:
       - "docker.io/mnkboy/simplecli:{{ .Version }}"
     build_flag_templates:
       - "--no-cache"
+
+nfpms:
+  - 
+    id: simplecli
+    package_name: simplecli
+    formats:
+      - deb
+      - rpm
+    homepage: https://github.com/mnkboy/simplecli
+    maintainer: mnkboy
+    description: |-
+      Simple CLI app installer package.
+    license: MIT
+    bindir: /usr/bin
+
+sboms:
+  - artifacts: archive
