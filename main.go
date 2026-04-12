@@ -21,5 +21,5 @@ func main() {
 		return
 	}
 
-	fmt.Printf("Operating System: %s\nArchitecture: %s\n", runtime.GOOS, runtime.GOARCH)
+	fmt.Printf("Operating System: %s\nArchitecture: %s.\n", runtime.GOOS, runtime.GOARCH)
 }
